@@ -1,0 +1,7 @@
+[build]
+  functions = "functions"
+
+[[redirects]]
+  from = "/myapp/*"
+  to = "/.netlify/functions/peerServe/myapp/:splat"
+  status = 200
