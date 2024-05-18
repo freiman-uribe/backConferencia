@@ -36,4 +36,4 @@ app.listen(PORT, () => {
   console.log(`Servidor Express escuchando en el puerto ${PORT}`);
 });
 
-module.exports = app;
+module.exports = app
