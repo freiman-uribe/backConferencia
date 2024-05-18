@@ -9,7 +9,13 @@ const peerServer = ExpressPeerServer(app, {
 });
 
 // Middleware para manejar las solicitudes de PeerJS
-app.use('/myapp/peerjs', peerServer);
+app.use('/myapp/peerjs', (req, res, next) => {
+  // Configurar los encabezados CORS para permitir solicitudes desde cualquier origen
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  peerServer(req, res, next);
+});
 
 // Ruta de prueba
 app.get('/', (req, res) => {
