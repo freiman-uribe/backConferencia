@@ -2,7 +2,7 @@
   "name": "video-conference",
   "version": "1.0.0",
   "description": "",
-  "main": "peerServer.js",
+  "main": "functions/peerServer.js",
   "scripts": {
     "start": "node functions/peerServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
